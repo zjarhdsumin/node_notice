@@ -1,6 +1,9 @@
+const { application } = require('express');
 var express = require('express');
 const maria = require('../connect/maria');
 var router = express.Router();
+var app = express();
+var port = 3000;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -32,5 +35,9 @@ router.post('/api/post/demo', function(req, res){
 });
 
 //여기 올ㅏㅏㄴ가 맞ㅏ??
+
+app.listen(port, function(){
+  console.log("HI sksms wlsWK emdtlsdlei..." + port);
+});
 
 module.exports = router;
